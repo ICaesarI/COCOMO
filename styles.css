@@ -1,0 +1,459 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Form and results section */
+#cocomo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cocomo-form h2 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+#cocomo-form div {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#cocomo-form label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+#cocomo-form input[type="number"] {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+button#calculate-cocomo {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#calculate-cocomo:hover {
+    background-color: #45a049;
+}
+
+#cocomo-result {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    text-align: center;
+}
+
+/* Container for attributes */
+#attributes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#attributes-container > div {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#attributes-container h3 {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#attributes-container p {
+    font-weight: bold;
+    margin: 1rem 0 0.5rem;
+    text-align: center;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Toggle language button */
+button#toggle-language {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#toggle-language:hover {
+    background-color: #45a049;
+}
+
+/* Toggle theme button */
+button#toggle-theme {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#toggle-theme:hover {
+    background-color: #45a049;
+}
+
+/* Toggle buttons container */
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem auto;
+}
+
+/* Toggle buttons (language and theme) */
+button#toggle-language,
+button#toggle-theme {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button#toggle-language:hover,
+button#toggle-theme:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+button#toggle-language:active,
+button#toggle-theme:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Legend container */
+#legend-container {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+#legend-container h3 {
+    color: #4CAF50;
+    margin-bottom: 0.5rem;
+    user-select: none;
+}
+
+#legend-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+
+#legend-container ul.hidden {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#legend-container ul:not(.hidden) {
+    max-height: 200px; /* Adjust based on content */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#legend-container li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+/* Legend title icon */
+#legend-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+#legend-icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+#legend-list:not(.hidden) + #legend-icon {
+    transform: rotate(180deg);
+}
+
+/* Custom styles for radio inputs */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input[type="radio"]:checked {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+input[type="radio"]:hover {
+    border-color: #45a049;
+    background-color: rgba(76, 175, 80, 0.2);
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Align radio buttons in a row */
+#attributes-container p + label {
+    display: inline-flex;
+    margin-right: 1rem;
+    align-items: center;
+}
+
+#attributes-container p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f9;
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode #cocomo-form,
+body.dark-mode #attributes-container {
+    background-color: #1e1e1e;
+    color: #f4f4f9;
+    border-color: #333;
+}
+
+body.dark-mode #attributes-container > div {
+    background-color: #333;
+    border-color: #444;
+}
+
+body.dark-mode #attributes-container h3 {
+    color: #4CAF50;
+}
+
+body.dark-mode button {
+    background-color: #333;
+    color: #f4f4f9;
+}
+
+body.dark-mode button:hover {
+    background-color: #444;
+}
+
+body.dark-mode input[type="number"] {
+    background-color: #333;
+    color: #f4f4f9;
+    border-color: #444;
+}
+
+body.dark-mode #legend-container {
+    background-color: #1e1e1e;
+    color: #f4f4f9;
+    border-color: #333;
+}
+
+body.dark-mode #legend-container h3 {
+    color: #4CAF50;
+}
+
+/* Kutcher's Basic COCOMO Calculator styles */
+#kutcher-cocomo-calculator {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+body.dark-mode #kutcher-cocomo-calculator {
+    background-color: #1e1e1e;
+    color: #f4f4f9;
+    border-color: #333;
+}
+
+#kutcher-cocomo-calculator h2,
+#kutcher-cocomo-calculator p {
+    color: inherit;
+}
+
+#kutcher-cocomo-calculator input[type="number"] {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+body.dark-mode #kutcher-cocomo-calculator input[type="number"] {
+    background-color: #333;
+    color: #f4f4f9;
+    border-color: #444;
+}
+
+#calculate-kutcher-cocomo {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#calculate-kutcher-cocomo:hover {
+    background-color: #45a049;
+}
+
+#calculate-kutcher-cocomo:active {
+    transform: translateY(2px);
+}
+
+#calculate-kutcher-cocomo:focus {
+    outline: none;
+    box-shadow: 0 0 5px #4CAF50;
+}
+
+.hidden-section {
+    display: none;
+}
+
+.hidden-section.active {
+    display: block;
+}
+
+/* Logo styles */
+.logo {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}

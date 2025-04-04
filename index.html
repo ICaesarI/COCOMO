@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CocomoII</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png" type="image/png"> <!-- Logo en la pestaña -->
+</head>
+
+<header>
+    <h1 class="header-title">
+        <img src="logo.png" alt="CocomoII Logo" class="logo"> CocomoII
+    </h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Baker Calculator</a></li>
+            <li><a href="#kutcher-cocomo-calculator">Kutcher Calculator</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="toggle-buttons">
+        <button id="toggle-language" type="button">Cambiar a Español</button>
+        <button id="toggle-theme" type="button">Modo Oscuro</button>
+    </div>
+    <form id="cocomo-form">
+        <h2 id="form-title">Select Project Mode</h2>
+        <div id="project-modes">
+            <label>
+                <input type="radio" name="project-mode" value="organic" checked> Organic Mode
+            </label>
+            <label>
+                <input type="radio" name="project-mode" value="semi-detached"> Semi-detached Mode
+            </label>
+            <label>
+                <input type="radio" name="project-mode" value="embedded"> Embedded Mode
+            </label>
+        </div>
+        <div>
+            <label for="sloc" id="sloc-label">Estimated SLOC (Source Lines of Code):</label>
+            <input type="number" id="sloc" name="sloc" placeholder="Enter SLOC" required>
+        </div>
+        <button id="calculate-cocomo" type="button">Calculate COCOMO</button>
+        <div id="cocomo-result"></div>
+    </form>
+
+    <div id="kutcher-cocomo-calculator" class="hidden-section">
+        <h2 id="kutcher-calculator-title">Kutcher's Basic COCOMO Calculator!</h2>
+        <p id="kutcher-calculator-description">
+            Enter the number of estimated lines of code and the calculator will determine how much time and how many people will be needed!
+        </p>
+        <div>
+            <label for="kutcher-sloc" id="kutcher-sloc-label">Thousands of Lines of Estimated Code:</label>
+            <input type="number" id="kutcher-sloc" name="kutcher-sloc" placeholder="Enter KLOC" required>
+        </div>
+        <button id="calculate-kutcher-cocomo" type="button">Calculate</button>
+        <div id="kutcher-cocomo-result">
+            <h3 id="organic-title">Organic Values</h3>
+            <p>Number of Months Needed: <span id="organic-months">-</span></p>
+            <p>Number of People Needed: <span id="organic-people">-</span></p>
+            <h3 id="semi-detached-title">SemiDetached Values</h3>
+            <p>Number of Months Needed: <span id="semi-detached-months">-</span></p>
+            <p>Number of People Needed: <span id="semi-detached-people">-</span></p>
+            <h3 id="embedded-title">Embedded Values</h3>
+            <p>Number of Months Needed: <span id="embedded-months">-</span></p>
+            <p>Number of People Needed: <span id="embedded-people">-</span></p>
+        </div>
+    </div>
+
+    <div id="legend-container">
+        <h3 id="legend-title" onclick="toggleLegend()">
+            Acronyms Used <span id="legend-icon">▼</span>
+        </h3>
+        <ul id="legend-list" class="hidden">
+            <li><strong>VL</strong>: Very Low</li>
+            <li><strong>L</strong>: Low</li>
+            <li><strong>N</strong>: Nominal</li>
+            <li><strong>H</strong>: High</li>
+            <li><strong>VH</strong>: Very High</li>
+            <li><strong>XH</strong>: eXtra High</li>
+        </ul>
+    </div>
+
+    <div id="attributes-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
